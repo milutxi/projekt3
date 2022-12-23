@@ -1,0 +1,54 @@
+html {
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #BBC3C9;
+    min-height: 100%;
+    margin: 0;
+}
+
+.game {
+    background-color: #9b6a6c;
+    border: 5px solid #212227;
+    border-radius: 30px;
+    padding: 24px;  
+}
+
+footer {
+    background-color: #9b6a6c;
+    border: 5px solid #212227;
+    border-radius: 30px;
+    padding: 0;  
+}
+
+h1,
+h3 {
+    color: #bdd4e7;
+    text-align: center;
+}
+
+main {
+    padding: 32px;
+}
+
+.picture {
+    padding: 32px;
+}
+
+.buttons {
+    border-radius: 20px;
+    font-size: 20px;
+    margin: 4px;
+    padding: 12px;
+
+}
+
+.activebutton {
+    background-color: #9b6a6c;
+    color: #bdd4e7;
+}
