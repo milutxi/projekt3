@@ -1,5 +1,6 @@
 html {
     height: 100vh;
+    margin: 0;
 }
 
 * {
@@ -8,7 +9,6 @@ html {
 
 body {
     background-color: #BBC3C9;
-    min-height: 100%;
     margin: 0;
 }
 
@@ -34,10 +34,7 @@ h3 {
 
 main {
     padding: 32px;
-}
-
-.picture {
-    padding: 32px;
+    height: 100%;
 }
 
 .buttons {
@@ -45,10 +42,94 @@ main {
     font-size: 20px;
     margin: 4px;
     padding: 12px;
-
 }
 
 .activebutton {
     background-color: #9b6a6c;
     color: #bdd4e7;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.section1,
+.section2 {
+    padding: 32px;
+}
+
+.guessword {
+    font-size: 100px;
+    text-align: center;
+}
+
+.attempts,
+.letters_entered,
+.section3 {
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 16px;
+    text-align: center;
+}
+
+.keyboard {
+    border: 2px solid #212227;
+    border-radius: 30px;
+    margin: auto;
+    padding: 12px;
+    width: 700px;
+}
+
+.reset-game {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.reset{
+    border: 2px solid #212227;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 12px 40px;
+}
+
+@media screen and (max-width: 750px) {
+    main {
+        padding: 12px;
+    }
+
+    .game {
+        padding: 8px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .section1 {
+        padding: 0;
+        margin: auto;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .section2 {
+        padding: 0;
+    }
+
+    .guessword {
+        font-size: 40px;
+        padding-top: 16px;
+    }
+
+    .letters_entered {
+        padding-top: 0;
+    }
+
+    .keyboard {
+        width: 100%;
+    }
 }
