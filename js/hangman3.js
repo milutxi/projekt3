@@ -23,14 +23,16 @@ $(function() {
         $(".picture").append('<img src="./images/'+b+'.jpg" alt="hangman" hidden=true id="' + b +'" />');
 
     }
-   
+    $(".wins").text("WINNINGS: " + wins);
+    $(".lose").text("LOSES: " + lose);
     $(".guessword").text(hiddenWord);
     $(".attempts").text("Atempts: " + attempts + " of 12");
     $(".letters_entered").text("Letters already entered: " + lettersEntered);
 
-
-    for (let k = 0; k < LETTERSARRAY.length; k++) {   //to get the keyboard from the LETTERSARRAY.
+    let k = 0
+    while(k < LETTERSARRAY.length){   //to get the keyboard from the LETTERSARRAY.
         $("<button class='buttons'>"+LETTERSARRAY[k]+"</button>").appendTo(".keyboard"); 
+        k++;
     }
 
     $(".buttons").on( {
@@ -59,6 +61,8 @@ $(function() {
                         $(".section3").text("CONGRATULATIONS!!! YOU WIN.The word was: " + newWord).show();
                         $(".reset-game").show();
                         wins++;
+                        $(".wins").text("WINNINGS: " + wins);
+                        
                     }else{
                         $(".guessword").text(hiddenWord);
                         $(".attempts").text("Atempts: " + attempts + " of 12");
@@ -69,20 +73,21 @@ $(function() {
 
 
                 }else{                  //the user enter the wrong letter
-                    if(attempts === 12) {
+                    if(attempts === 12) {//first failed attempt
                         $("#" + attempts).show();
                         attempts--;
-                    }else{
+                    }else{//other failed attempts
                         $("#"+ (attempts + 1)).hide();
                         $("#" + attempts).show();
                         attempts--;
 
-                        if(attempts === 0) {
+                        if(attempts === 0) {//When no attempts remain
                             $(".section2").hide();
                             $(".keyboard").hide();
                             $(".section3").text("GAME OVER, click reset to start again").show();
-                            $("reset-game").show();
+                            $(".reset-game").show();
                             lose++;
+                            $(".lose").text("LOSES: " + lose);
                         }
                     }
                     
@@ -98,8 +103,8 @@ $(function() {
                $(".section2").hide();
                $(".keyboard").hide();
                $(".section3").text("GAME OVER, click reset to start again");
-               $("reset-game").show();
-               //lose++;
+               $(".reset-game").show();
+               
             }
         }
     })

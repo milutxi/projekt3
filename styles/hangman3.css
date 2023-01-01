@@ -16,7 +16,6 @@ body {
     background-color: #9b6a6c;
     border: 5px solid #212227;
     border-radius: 30px;
-    padding: 24px;  
 }
 
 footer {
@@ -33,8 +32,8 @@ h3 {
 }
 
 main {
-    padding: 32px;
     height: 100%;
+    padding: 32px;
 }
 
 .buttons {
@@ -71,6 +70,12 @@ main {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 16px;
     text-align: center;
+}
+
+.section4 {
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 16px;
 }
 
 .keyboard {
